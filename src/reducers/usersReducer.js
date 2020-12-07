@@ -1,0 +1,45 @@
+export default function usersReducer(state={
+    firstName: '',
+    lastName: '',
+    email: '',
+    registering: false,
+    loggedIn: false,
+    loggingIn: false 
+  }, action) {
+  
+      // const {
+      //     firstName, 
+      //     lastName, 
+      //     email
+      // } = action.payload;
+      
+      const localStoredUser = localStorage.getItem("user") ? 
+      JSON.parse(localStorage.getItem("user")) :
+      localStorage.setItem("user", JSON.stringify({first_name: "", last_name: "", email: "", registering: false}))
+      
+      const loggedInn = localStorage.getItem("loggedIn") ? 
+      JSON.parse(localStorage.getItem("loggedIn")) :
+      localStorage.setItem("loggedIn", false)
+      
+      switch(action.type) {
+          case 'ADD_USER':
+              // pull all relevant data from state
+              return {
+                  ...state,
+                  firstName: localStoredUser.first_name,
+                  lastName: localStoredUser.last_name,
+                  email: localStoredUser.email,
+                  registering: false,
+                  loggedIn: loggedInn
+              }
+          case 'REGISTERING_USER':
+              return {
+                  ...state,
+                  registering: true
+              }
+              
+          default: 
+              return state;
+      }
+  };
+  
