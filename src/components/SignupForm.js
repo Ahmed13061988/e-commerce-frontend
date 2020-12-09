@@ -16,7 +16,7 @@ const SignupForm = (props) => {
                 <input onChange={handleChange} type="email" name="email" value={props.email} placeholder="email"/>
                 <input onChange={handleChange} type="password" name="password" value={props.password} placeholder="password"/>
                 <input onChange={handleChange} type="password" name="passwordConfirmation" value={props.password_confirmation} placeholder="password confirmation"/>
-                <button type="submit">Register</button>
+                <button type="submit">Signup</button>
             </form>
         </div>
     )

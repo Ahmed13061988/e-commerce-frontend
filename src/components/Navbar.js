@@ -5,17 +5,17 @@ import Logout from './Logout'
 const Navbar = props => {  
     return (
         <div>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/items'>Shop</NavLink>
+           <button className="home"><NavLink to='/'>Home</NavLink></button><br/>
+           <button className="Shop"><NavLink to='/items'>Shop</NavLink></button>
 
             { props.user.loggedIn ?
                 <Logout handleLogoutClick={props.handleLogoutClick} /> :
                 <>
-                    <NavLink to='/login'> Login</NavLink>
-                    <NavLink to='/signup'> Signup</NavLink>
+                   <button className="login"><NavLink to='/login'> Login</NavLink></button>
+                   <button className="signup"><NavLink to='/signup'> Signup</NavLink></button>
                 </>
             }
-            <NavLink to='/cart'>Cart</NavLink>
+            <button><NavLink to='/cart'>Cart</NavLink></button>
         </div>
     )
 }

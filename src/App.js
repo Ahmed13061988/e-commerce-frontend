@@ -18,6 +18,7 @@ import SignupPage from './containers/SignupPage';
 import LoginPage from './containers/LoginPage';
 import ItemsList from './containers/ItemsList';
 import CartPage from './containers/CartPage';
+import './App.css';
 
 
 // function App(props) {
