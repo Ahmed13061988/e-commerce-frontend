@@ -39,7 +39,7 @@ export default function cartReducer(state = {
         case 'PLACING_ORDER':
             console.log("placing order")
             
-        default:
+         default:
             return state
     }
 }

@@ -2,7 +2,6 @@ export const removeFromCart = (item, cartId) => {
     return (dispatch) => {
         fetch(`http://localhost:3000/carts/${cartId}`, {
             method: 'DELETE', 
-            credentials: 'include', 
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -26,7 +25,6 @@ export const placeOrder = () => {
        dispatch({type: 'PLACING_ORDER'})
        fetch('http://localhost:3000/orders', {
             method: 'POST', 
-            credentials: 'include', 
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -52,7 +50,6 @@ export const addItemToCart = (item, cartId) => {
         fetch('http://localhost:3000/carts', 
         {
           method: 'POST', 
-          credentials: 'include', 
           headers: {
               'Content-Type': 'application/json'
           },

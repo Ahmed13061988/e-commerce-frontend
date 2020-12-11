@@ -25,7 +25,6 @@ export const registerUser = (userFormData) => {
         fetch('http://localhost:3000/users', 
         {
           method: 'POST', 
-          credentials: 'include', 
           headers: {
               'Content-Type': 'application/json'
           },
@@ -64,7 +63,6 @@ export const loginUser = (userCredentials) => {
         fetch('http://localhost:3000/login', 
         {
           method: 'POST', 
-          credentials: 'include', 
           headers: {
               'Content-Type': 'application/json'
           },
@@ -106,7 +104,6 @@ export const logoutUser = () => {
         fetch('http://localhost:3000/logout', 
         {
             method: 'DELETE', 
-            credentials: 'include', 
             headers: {
                 'Content-Type': 'application/json'
             }
