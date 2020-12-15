@@ -12,6 +12,7 @@ export const fetchItems = () => {
         fetch('http://localhost:3000/items') 
         .then(resp => resp.json())
         .then(resp => {
+            console.log(resp)
             dispatch(addItems(resp))
         })
     }

@@ -12,9 +12,9 @@ export const removeFromCart = (item, cartId) => {
             })
        })
        .then(resp => resp.json())
-       .then(resp => {
-        localStorage.setItem("cart", JSON.stringify(resp.cart))
-        dispatch(updateCart(resp))
+       .then(res => {
+        localStorage.setItem("cart", JSON.stringify(res.cart))
+        dispatch(updateCart(res))
         })
     }
 }
@@ -44,6 +44,13 @@ export const updateCart = (cart) => {
     }
 }
 
+// export const removeCart = (cart) => {
+//     return {
+//         type: 'REMOVE_CART',
+//         payload: localStorage.clear()
+//     }
+// }
+
 export const addItemToCart = (item, cartId) => {
     return (dispatch) => {
         dispatch({type:'ADDING_TO_CART'})
@@ -60,7 +67,7 @@ export const addItemToCart = (item, cartId) => {
         })
         .then(resp => resp.json())
         .then(res => {
-            console.log(res)
+            console.log("===================================", res)
             localStorage.setItem("cart", JSON.stringify(res.cart))
             dispatch(updateCart(res))
         })

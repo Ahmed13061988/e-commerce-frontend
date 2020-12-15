@@ -8,11 +8,11 @@ export const addUser = (user) => {
     }
 }
 
-const userLogoutAction = () => {
-    return {
-        type: 'LOGOUT_USER'
-    }
-}
+// const userLogoutAction = () => {
+//     return {
+//         type: 'LOGOUT_USER'
+//     }
+// }
 
 export const registerUser = (userFormData) => {
 

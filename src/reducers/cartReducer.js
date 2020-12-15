@@ -12,18 +12,23 @@ export default function cartReducer(state = {
 
     const localStoredCart =  localStorage.getItem("cart") ? 
         JSON.parse(localStorage.getItem("cart")) :
-        localStorage.setItem("cart", JSON.stringify({id: "", items: [], total: 0}))
+        localStorage.setItem("cart", JSON.stringify({id: "", items: []}))
         JSON.parse(localStorage.getItem("cart"))
-    
+    // const localStoredTotal = localStorage.getItem("total") ? 
+    //     JSON.parse(localStorage.getItem("total")) :
+    //     localStorage.setItem("total", JSON.stringify(0))
+    //     JSON.parse(localStorage.getItem("total"))
     switch(action.type) {
 
         case 'UPDATE_CART':
             console.log('updating cart')
+            console.log(action)
             return {
                 ...state,
                 cartId: localStoredCart.id,
                 cartItems: localStoredCart.items,
-                total: localStoredCart.total
+                // total: localStoredCart.total
+                
                 // cartId: action.payload.cart.id,
                 // cartItems: action.payload.cart.items,
                 // total: action.payload.cart.total
@@ -33,11 +38,13 @@ export default function cartReducer(state = {
             console.log('Adding items to cart')
             return {
                 ...state,
-                addingItemToCart: true
+                addingItemToCart: true 
             }
+
             
         case 'PLACING_ORDER':
             console.log("placing order")
+            return state
             
          default:
             return state
