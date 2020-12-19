@@ -12,10 +12,10 @@ const Cart = (props) => {
     
     // const total = 
     return (
-        <div>
+        <div> 
             <h4>Shopping Cart</h4>
-            {/* <h3>Cart total: ${props.total}</h3> */}
-            <ls>{cartItems}</ls>
+            <h3>Cart total: ${props.total}</h3>
+             {cartItems}
             <button onClick={props.submitOrder}>Place Order</button>
         </div>
     )

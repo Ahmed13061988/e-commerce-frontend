@@ -19,32 +19,10 @@ import LoginPage from './containers/LoginPage';
 import ItemsList from './containers/ItemsList';
 import CartPage from './containers/CartPage';
 import './App.css';
+import Order from './containers/OrderPage';
 
 
-// function App(props) {
-//   //Whenever this component renders, (either on mounting or updating) make a call to the API
-//   useEffect(()=> {
-//       props.fetchItems()
-//   })
 
-//   return (
-//     <Router>
-//       <div className="App">
-//         <Navbar handleLogoutClick={props.handleLogoutClick} user={props.user} />
-//         <Switch>
-//           <Route exact path="/" component={Home} />
-//           <Route path="/signup" component={SignupPage} />
-//           <Route path="/login" component={LoginPage} />
-//           <Route path="/items" component={ItemsList} />
-//           <Route path="/cart" component={CartPage} />
-
-//         </Switch>
-        
-//         {/* <ItemsList items={this.props.items}/> */}                       
-//       </div>
-//     </Router>
-//   );
-// }
 
 class App extends Component {
 
@@ -65,6 +43,7 @@ class App extends Component {
            <Route path="/login" component={LoginPage} />
            <Route path="/items" component={ItemsList} />
            <Route path="/cart" component={CartPage} />
+           <Route path="/orders" component={Order}/>
          </Switch>               
        </div>
      </Router>

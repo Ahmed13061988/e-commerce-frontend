@@ -5,8 +5,9 @@ import Logout from './Logout'
 const Navbar = props => {  
     return (
         <div>
-           <button className="home"><NavLink to='/'>Home</NavLink></button><br/>
+           <button className="home"><NavLink to='/'>Home</NavLink></button>
            <button className="Shop"><NavLink to='/items'>Shop</NavLink></button>
+           <button className="order"><NavLink to='/orders'>Orders</NavLink></button>
 
             { props.user.loggedIn ?
                 <Logout handleLogoutClick={props.handleLogoutClick} /> :
