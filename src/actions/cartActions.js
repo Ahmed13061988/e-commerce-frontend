@@ -48,12 +48,6 @@ export const updateCart = cart => {
     }
 }
 
-// export const removeCart = (cart) => {
-//     return {
-//         type: 'REMOVE_CART',
-//         payload: localStorage.clear()
-//     }
-// }
 
 export const addItemToCart = (item, cartId) => {
     return (dispatch) => {

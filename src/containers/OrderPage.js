@@ -5,11 +5,7 @@ import Order from '../components/Order';
 const OrderPage = (props) =>{
     console.log("from orderpage",props)
 
-    const handleSubmitOrder = () => {
-        // get passed to Cart
-        props.submitOrder()
-    }
-
+ 
 
     return(
         <div>
@@ -19,9 +15,6 @@ const OrderPage = (props) =>{
 }
 
 const mapStateToProps = state => ({
-    //  cartItems: state.cart.cartItems,
-    //   cartId: state.cart.cartId,
-    // total: state.cart.total
     orderList: state.cart.orderList,
 });
 
